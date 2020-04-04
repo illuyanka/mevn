@@ -1,15 +1,15 @@
 <template>
   <div class="container">
     <h1>Latest Posts</h1>
-    <form class="create-post form-group">
+    <div class="create-post form-group">
       <div class="form-group">
         <label for="create-post">Say something... (Double click for deleting) </label>
-        <input class="form-control" type="text" name="create-post" id="create-post" v-model="text" placeholder="Create a post" />
+        <input class="form-control" type="text" id="create-post" v-model="text" placeholder="Create a post" />
       </div>
       <div class="form-control-group">
         <button class="btn btn-primary btn-block" v-on:click="createPost">Post!</button>
       </div>
-    </form>
+    </div>
     <hr />
     <p class="error" v-if="error">{{error}}</p>
     <div class="post-container">
@@ -21,7 +21,7 @@
         v-bind:key="post._id"
         v-on:dblclick="deletePost(post._id)"
       >
-        {{ `${post.createdAt.getDate()}/${post.createdAt.getMonth()}/${post.createdAt.getFullYear()}`}}
+        {{ `${post.createdAt.getDate()}/${post.createdAt.getMonth()+1}/${post.createdAt.getFullYear()}`}}
         <p class="text">{{post.text}}</p>
       </div>
     </div>
