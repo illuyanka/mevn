@@ -1,4 +1,3 @@
-  
 const express = require('express');
 const mongodb = require('mongodb');
 
@@ -29,9 +28,9 @@ router.delete('/:id', async (req, res) => {
 
 async function loadPostsCollection() {
   const client = await mongodb.MongoClient.connect(
-    'mongodb+srv://dlr:1234@test-e0dr2.mongodb.net/test?retryWrites=true&w=majority',
+    'mongodb://YOUR_OWN_MONGODB',
     {
-      useNewUrlParser: true,useUnifiedTopology: true 
+      useNewUrlParser: true
     }
   );
 
