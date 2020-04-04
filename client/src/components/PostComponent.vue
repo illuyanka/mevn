@@ -3,7 +3,7 @@
     <h1>Latest Posts</h1>
     <form class="create-post form-group">
       <div class="form-group">
-        <label for="create-post">Say something...</label>
+        <label for="create-post">Say something... (Double click for deleting) </label>
         <input class="form-control" type="text" name="create-post" id="create-post" v-model="text" placeholder="Create a post" />
       </div>
       <div class="form-control-group">
@@ -78,12 +78,16 @@ p.error {
 
 div.post {
   position: relative;
-  border: 1px solid #5bd658;
-  background-color: #bcffb8;
+  background-color: #35495e;
   padding: 10px 10px 30px 10px;
   margin-bottom: 15px;
+  color:#fff;
 }
-
+.btn-primary {
+    color: #fff;
+    background-color: #41b883!important;
+    border-color: #41b883!important;
+}
 div.created-at {
   position: absolute;
   top: 0;
